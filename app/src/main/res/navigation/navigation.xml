@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="ui.Login"
+        android:label="login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_Listing"
+        android:name="ui.ShoeListing"
+        android:label="shoes"
+        tools:layout="@layout/fragment_shoe_listing">
+        <action
+            android:id="@+id/action_shoe_Listing_to_shoe_Detail"
+            app:destination="@id/shoe_Detail"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/shoe_Listing"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_shoe_Listing_to_login"
+            app:destination="@id/login"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_Detail"
+        android:name="ui.ShoeDetail"
+        android:label="details"
+        tools:layout="@layout/details" >
+        <action
+            android:id="@+id/action_shoe_Detail_to_shoe_Listing"
+            app:destination="@id/shoe_Listing"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/shoe_Listing" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionss"
+        android:name="ui.Instructionss"
+        android:label="instructionss"
+        tools:layout="@layout/fragment_instructionss">
+        <action
+            android:id="@+id/action_instructionss_to_shoe_Listing"
+            app:destination="@id/shoe_Listing"
+            app:popUpTo="@id/instructionss"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="ui.WelcomeFragment"
+        android:label="welcome"
+        tools:layout="@layout/fragment_welcom">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionss"
+            app:destination="@id/instructionss"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,45 @@
+<resources>
+
+    <string name="app_name">shoe store</string>
+    <!--  text for login screen  -->
+
+    <string name="please_enter_your_email">please enter your email</string>
+    <string name="please_enter_your_password">please enter your password</string>
+    <string name="login">Login</string>
+    <string name="next">next</string>
+    <string name="create">create</string>
+
+    <!--  text for welcome screen  -->
+
+    <string name="welcom">Welcome to the shoe store app
+        you are in the perfect place ,here you can find a lot of amazing shoes that you will like. </string>
+
+    <!--  text for Instructions screen  -->
+
+    <string name="Instructions">  You can add new shoes to the shoe collection by pressing the Add button at the bottom of the screen you will be asked to add some product details . </string>
+
+
+    <!--  text for detalis_screen  -->
+
+    <string name="logout_menu">logout</string>
+    <string name="shoe_name">shoe name: </string>
+    <string name="shoe_size">shoe size:</string>
+    <string name="shoe_company"> shoe company:</string>
+    <string name="shoe_description">shoe description:</string>
+
+
+    <string name="add_new_shoe">add new shoe to the list</string>
+    <string name="add_shoe">ADD</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_list">the list are empty you can add shoe by click on button</string>
+
+
+    <string name="format_company">Company: %s</string>
+    <string name="format_size">Shoe Size: %.1f</string>
+    <string name="format_description">Description: %s</string>
+    <string name="format_name">name:%s</string>
+    <string name="Instructionsword">Instructions</string>
+    <string name="welcome">welcome</string>
+
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#CDCDCD">
+
+    <data>
+        <variable
+            name="shoeitem"
+            type="com.example.shoestore.models.Shoe" />
+
+    </data>
+
+
+    <!--I use cardview  because it helped me to get a nice ui design-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#EDA4A4"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints">
+
+
+        <!-- i used constraintlayout here because it helped me to reduce complexity-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <ImageView
+            android:id="@+id/itemimage"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sports"/>
+
+        <TextView
+            android:id="@+id/ItemName"
+            style="@style/text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/format_name(shoeitem.name)}"
+            android:textColor="#018786"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/ItemSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/itemimage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Shoe Name" />
+
+        <TextView
+            android:id="@+id/ItemSize"
+            style="@style/text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/format_size(shoeitem.size)}"
+            android:textColor="#018786"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/ItemCompany"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/itemimage"
+            app:layout_constraintTop_toBottomOf="@+id/ItemName"
+            tools:text="Shoe Size: 22" />
+
+        <TextView
+            android:id="@+id/ItemCompany"
+            style="@style/text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{@string/format_company(shoeitem.company)}"
+            android:textColor="@color/teal_700"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/ItemDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/itemimage"
+            app:layout_constraintTop_toBottomOf="@+id/ItemSize"
+            tools:text="Company:puma" />
+
+        <TextView
+            android:id="@+id/ItemDescription"
+            style="@style/text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:maxWidth="200dp"
+            android:text="@{@string/format_description(shoeitem.description)}"
+            android:textColor="#018786"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/itemimage"
+            app:layout_constraintTop_toBottomOf="@+id/ItemCompany"
+            tools:text="Description:sporting shoe" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+</layout>
